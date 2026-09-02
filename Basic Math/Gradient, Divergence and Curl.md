@@ -13,13 +13,13 @@ $$\text{Gradient of } f = \nabla f = (\frac{\partial{f}}{\partial{x}}\vec{i}, \f
 which is a **vector field**!
 
 ## Divergence:
-Divergence of a **vector field** (i.e. $\vec{F} = (F_{x}, F_{y}, F_{z})$)
-$$\text{Divergence of }F = \nabla \cdot \vec{F} = \frac{\partial{F_{x}}}{\partial{x}} + \frac{\partial{F_{y}}{\partial{y}} + \frac{\partial{F_{z}}}{\partial{z}}$$
+Divergence of a **vector field** $\vec{F} = (F_{x}, F_{y}, F_{z})$
+$$\text{Divergence of }F = \nabla \cdot \vec{F} = \frac{\partial{F_{x}}}{\partial{x}} + \frac{\partial{F_{y}}}{\partial{y}} + \frac{\partial{F_{z}}}{\partial{z}}$$
 
 which is a **scalar field**!
 
 ## Curl:
-Curl of a **vector field** (i.e. $\vec{F} = (F_{x}, F_{y}, F_{z})$)
+Curl of a **vector field** $\vec{F} = (F_{x}, F_{y}, F_{z})$
 $$\text{Curl of } F = \nabla \times \vec{F}$$
 
 ## Fundamental Theorem of vector calculus (in $\mathbb{R}^{3}$)

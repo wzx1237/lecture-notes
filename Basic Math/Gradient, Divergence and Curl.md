@@ -6,22 +6,22 @@ Time: 2026/05/05
 Nabla Operator: $\nabla$
 
 For example, in $\mathbb{R}^3$: 
-$$\nabla = \frac{\partial}{\partial{x}}\vector{i} + \frac{\partial}{\partial{y}}\vector{j} + \frac{\partial}{\partial{z}}\vector{k} = (\frac{\partial}{\partial{x}}\vector{i}, \frac{\partial}{\partial{y}}\vector{j}, \frac{\partial}{\partial{z}}\vector{k})$$
+$$\nabla = \frac{\partial}{\partial{x}}\vec{i} + \frac{\partial}{\partial{y}}\vec{j} + \frac{\partial}{\partial{z}}\vec{k} = (\frac{\partial}{\partial{x}}\vec{i}, \frac{\partial}{\partial{y}}\vec{j}, \frac{\partial}{\partial{z}}\vec{k})$$
 
 Gradient of a function $f: \mathbb{R}^{3} \rightArrow \mathbb{R}$ (scalar field):
-$$\text{Gradient of } f = \nabla f = (\frac{\partial{f}}{\partial{x}}\vector{i}, \frac{\partial{f}}{\partial{y}}\vector{j}, \frac{\partial{f}}{\partial{z}}\vector{k})$$
+$$\text{Gradient of } f = \nabla f = (\frac{\partial{f}}{\partial{x}}\vec{i}, \frac{\partial{f}}{\partial{y}}\vec{j}, \frac{\partial{f}}{\partial{z}}\vec{k})$$
 which is a **vector field**!
 
 ## Divergence:
-Divergence of a **vector field** (i.e. $\vector{F} = (F_{x}, F_{y}, F_{z})$)
-$$\text{Divergence of }F = \nabla \cdot \vector{F} = \frac{\partial{F_{x}}}{\partial{x}} + \frac{\partial{F_{y}}{\partial{y}} + \frac{\partial{F_{z}}}{\partial{z}}$$
+Divergence of a **vector field** (i.e. $\vec{F} = (F_{x}, F_{y}, F_{z})$)
+$$\text{Divergence of }F = \nabla \cdot \vec{F} = \frac{\partial{F_{x}}}{\partial{x}} + \frac{\partial{F_{y}}{\partial{y}} + \frac{\partial{F_{z}}}{\partial{z}}$$
 
 which is a **scalar field**!
 
 ## Curl:
-Curl of a **vector field** (i.e. $\vector{F} = (F_{x}, F_{y}, F_{z})$)
-$$\text{Curl of } F = \nabla \times \vector{F}$$
+Curl of a **vector field** (i.e. $\vec{F} = (F_{x}, F_{y}, F_{z})$)
+$$\text{Curl of } F = \nabla \times \vec{F}$$
 
 ## Fundamental Theorem of vector calculus (in $\mathbb{R}^{3}$)
-$$F = - \nabla \phi + \nabla \times \vector{A}$$
-, where $\phi$ and $\vector{A}$ is a vector field in $\mathbb{R}^{3}$
+$$F = - \nabla \phi + \nabla \times \vec{A}$$
+, where $\phi$ and $\vec{A}$ is a vector field in $\mathbb{R}^{3}$

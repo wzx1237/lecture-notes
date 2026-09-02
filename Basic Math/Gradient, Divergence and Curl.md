@@ -8,7 +8,7 @@ Nabla Operator: $\nabla$
 For example, in $\mathbb{R}^3$: 
 $$\nabla = \frac{\partial}{\partial{x}}\vec{i} + \frac{\partial}{\partial{y}}\vec{j} + \frac{\partial}{\partial{z}}\vec{k} = (\frac{\partial}{\partial{x}}\vec{i}, \frac{\partial}{\partial{y}}\vec{j}, \frac{\partial}{\partial{z}}\vec{k})$$
 
-Gradient of a function $f: \mathbb{R}^{3} \rightArrow \mathbb{R}$ (scalar field):
+Gradient of a function $f: \mathbb{R}^{3} \rightarrow \mathbb{R}$ (scalar field):
 $$\text{Gradient of } f = \nabla f = (\frac{\partial{f}}{\partial{x}}\vec{i}, \frac{\partial{f}}{\partial{y}}\vec{j}, \frac{\partial{f}}{\partial{z}}\vec{k})$$
 which is a **vector field**!
 

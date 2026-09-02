@@ -5,6 +5,13 @@ Our primary goal will be to find information about the unknown function, which i
 $$a_0(x)y + a_1(x)y' + a_2(x)y'' + ... + a_n(x)y^{(n)} = b(x)$$
 where $a_0(x), ..., a_n(x)$ and $b(x)$ are arbitrary differentiable functions that **do not need to be linear**, and $y′, ..., y(n)$ are the **successive derivatives of an unknown function $y$ of the variable $x$**.
 
+2. **The order of the differential equation is the highest order of derivative of the unknown function that appears in the differential equation**. For example, an equation containing only first-order derivatives is a first-order differential equation, an equation containing the second-order derivative is a second-order differential equation, and so on
+
+3. A linear differential equation is **homogeneous** if each term in the equation includes either the dependent variable or one of its derivatives. If this is not the case, so that there is a term that does not include either the dependent variable itself or a derivative of it, the equation is inhomogeneous or heterogeneous. See the examples section below.
+
+### Example of different differential equation
+
+
 ## Example
 Show that $y = e^x + x + 1$ is a solution to the D.E. $\frac{dy}{dx} = y - x$
 
@@ -83,6 +90,14 @@ i) Already in normal form
 ii) Find the integration factor:
 $$\mu = e^{\int a(t)dt}$$
 
+in our example, it is: $\mu = e^{\int -1 dt} = e^{-t}$
+
 iii) Mutiply both sides of (i) by $\mu$
 
+in our example, the equation becomes: $e^{-t}y' - ye^{-t} = 2te^{2t}$
+
 iv) Rewrite (iii) using the product rule
+
+in our example, the equation in (iii) can be rewrited as $\frac{d}{dt} [ye^{-t}] = \frac{d}{dt} [(t-\frac{1}{2})e^{2t}]$
+
+So, the answer is $y = (t - \frac{1}{2})e^{3t}$

@@ -9,10 +9,13 @@ where $a_0(x), ..., a_n(x)$ and $b(x)$ are arbitrary differentiable functions th
 Show that $y = e^x + x + 1$ is a solution to the D.E. $\frac{dy}{dx} = y - x$
 
 Ans: 
+
 $$
+\begin{aligned}
 \text{Let: } y = e^x + x + 1 \\
 \text{LHS: } \frac{dy}{dx} = e^x + 1 \\
 \text{RHS: } y - x = e^x + 1
+\end{aligned}
 $$
 
 ## Practice
@@ -21,9 +24,11 @@ Determine if $y = -t\mathbb{cos}t + t$ is a solution to the D.E. $t\frac{dy}{dt}
 Ans:
 
 $$
+\begin{aligned}
 \text{Let: } y = -t\mathbb{cos}t + t\\
 \text{LHS: } t\frac{dy}{dx} = -t\mathbb{cos}t + t^2\mathbb{sin}t + t \\
 \text{RHS: } y + t^2\mathbb{sin}t = -t\mathbb{cos}t + t + t^2\mathbb{sin}t
+\end{aligned}
 $$
 
 So, it is a solution.
@@ -37,9 +42,12 @@ Given a 1st-order linear D.E. in **explicit form** $\frac{dy}{dt} = f(t)$ (no $y
 Find a general solution of $\frac{dy}{dx} = 3x^4 + 10$
 
 Solution:
+
 $$
+\begin{aligned}
 \int \frac{dy}{dx} dx = \int 3x^4 + 10 dx \\
 y = \frac{3}{5}x^5 + 10x + C
+\end{aligned}
 $$
 
 ## Def 2
@@ -64,7 +72,7 @@ $$\frac{dy}{dt}+ a(t)y = f(t)$$
 , where $a(t) = \frac{p_0(t)}{p_1(t)}$ and $f(t) = \frac{r(t)}{p_1(t)}$
 
 ## Integrating Factor Method (used for 1st-order, linear)
-###Example
+### Example
 Solve the IVP
 $$y' - y = 2te^{2t}, y(0) = 1$$
 

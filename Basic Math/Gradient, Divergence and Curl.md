@@ -28,7 +28,8 @@ $$F = - \nabla \phi + \nabla \times \vec{A}$$
 
 ## Example of calculating gradient for a Loss Function:
 
-Given Loss function
-$$L(\vec{\omega}, b) = \frac{1}{n} \sum_{i=1}^{n} (\hat{y_{i}} - y_i)^{2} + \lambda ||\vec{\omega}||_{2}^{2}$$
-where $\hat{y_i} = \vec{\omega}^{T} \dot x_{i} + b$
+Given Loss function:
 
+$$L(\vec{\omega}, b) = \frac{1}{n} \sum_{i=1}^{n} (\hat{y_{i}} - y_i)^{2} + \lambda ||\vec{\omega}||^{2}$$
+
+where $\hat{y_i} = \vec{\omega}^{T} \dot x_{i} + b$

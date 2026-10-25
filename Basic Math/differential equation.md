@@ -101,3 +101,36 @@ iv) Rewrite (iii) using the product rule
 in our example, the equation in (iii) can be rewrited as $\frac{d}{dt} [ye^{-t}] = \frac{d}{dt} [(t-\frac{1}{2})e^{2t}]$
 
 So, the answer is $y = (t - \frac{1}{2})e^{3t}$
+
+## How to solve differential equation in a general way?
+### characteristic polynomial method
+
+Now, consider we have differential equation:
+
+$$\frac{\mathrm{d}^{n}y}{\mathrm{d}t} + a_{n-1} \frac{\mathrm{d}^{n-1}y}{\mathrm{d}t} + ... + a_{1} \frac{\mathrm{d}y}{\mathrm{d}t} + a_{0} y = 0$$
+
+where $a_{n-1}$, ... , $a_{0}$ is constant and the equation is homogenous linear equation in normal form.
+
+Obviously, directly solving this question (find general solution) by integrating some part would be almost impossible. So, why not change our mind: finding the general solution by find the possible solution space? For example, if we have two possible solution $e^{2t}$ and $e^{3t}$ of differential equation $y'' - 5y' + 6 = 0$ (you can verify it by pulging the solution into the equation). What would our final general solution looks like? In the form $e^{2} \cdot e^{3}$? or $e^{2} + e^{3}$. To answer this question, we can first look at the properties that derivative has.
+
+#### Derivative is Linear Operator
+
+Recall what is linear operator. Linear Operator should have following properties:
+1. $L(\vec{x} + \vec{y}) = L(\vec{x}) + L(\vec{y})$
+2. $L(a\vec{x}) = aL(\vec{x})$, where $a$ is a constant
+
+Obviously, the derivative we studied is linear operator, since:
+1. $(f + g)' = f' + g'$
+2. $(af)' = af'$
+
+Thus, let's denote derivative as Linear Operator $D$. And the differential equation can be written in the form of **Linear Transformation**. That is $Ly = 0$, where $L = D^{n} + a_{n-1} D^{n-1} + ... + a_{1} D + a_{0}$. By doing so we successfully transform the problem os solving differential equation into finding Null space of $L$
+
+Then, how can we find the Null space? Notice that linear space is defined by its dimension. That means $A = B \leftrightarrow dim A = dim B$. That is, as long as we can find the basis of Null space, the Null space is found. Then, there are two problems pops:
+1. how many number of basis we need (dim)
+2. are these vectors really form the basis
+
+The answer of first question is given by the **Basic Existance and Uniqueness Theorem**. It suggests: Assume all cofficients $a_{0}(t)$, ... , $a_{n-1}(t)$ and $f(t)$ are continous over interval $(t_{1}, t_{2})$. Then given any initial time $t_{I}$ in $(t_{1}, t_{2})$ and any initial data $y_1$, ... , $y_{n-1}$. There **exists** a **unique solution** $y = Y(t)$ of our differential equation.
+
+So, we can ealisy construct a bijection between the solution space and $\mathbb{R}^{n}$. That is because the value we need is: $y_1$, ... , $y_{n-1}$ and $t_{I}$, totally $n$ numbers. We can simply assemble them into a n-dimension vector, which is in $\mathbb{R}^{n}$. Thus, by the **Basic Existance and Uniqueness Theorem**, the solution is determined by these vector (existance implies "onto"; uniqueness suggests "one-to-one"). So, this is a bijection.
+
+The answer of problem 2 can be examed by **Wronskain**.

@@ -1,4 +1,4 @@
-# This is a note about math used in mechine learning
+# This is a note about math used in machine learning
 
 Time: 2026/05/05
 
@@ -30,6 +30,6 @@ $$F = - \nabla \phi + \nabla \times \vec{A}$$
 
 Given Loss function:
 
-$$L(\vec{\omega}, b) = \frac{1}{n} \sum_{i=1}^{n} (\hat{y_{i}} - y_i)^{2} + \lambda ||\vec{\omega}||^{2}$$
+$$L(\vec{\omega}, b) = \frac{1}{n} \sum_{i=1}^{n} (\hat{y_{i}} - y_i)^{2} + \lambda \lVert \vec{\omega} \rVert^{2}$$
 
 where $\hat{y_i} = \vec{\omega}^{T} \dot x_{i} + b$

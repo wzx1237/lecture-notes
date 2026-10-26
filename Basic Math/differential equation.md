@@ -138,7 +138,7 @@ From above discussion, finding n linear independent basis of solution space can 
 As we know in linear algebra, **Linear system** $A\vec{x} = 0$ **will have nonzero solution if and only if** $\mathrm{det}(A) = 0$. So, determinants provide us a way to machincally exam whether the given basis is linear independent or not. To illustrate how can we apply it, let's use determinants to solve the second problem.
 
 **Lemma: solutions to the differential equation $Ly = 0$ are linear dependent if and only if the Wronskain is always zero over interval of definition $I$.** Where the Wronskain is defined by:
-$$
+```math
 Wr[y_{1}, y_{2}, \cdots, y_{n}] = 
 \begin{vmatrix}
 y_{1} & y_{2} & \cdots & y_{n} \\
@@ -151,24 +151,24 @@ y_{1}^{(1)} & y_{2}^{(1)} & \cdots & y_{n}^{(1)} \\
 \vdots & \vdots & \ddots & \vdots \\
 y_{1}^{(n-1)} & y_{2}^{(n-1)} & \cdots & y_{n}^{(n-1)}
 \end{pmatrix}
-$$
+```
 
 ($\Rightarrow$): since we assume solutions $y_{1}(t)$, $y_{2}(t)$, ..., $y_{n}(t)$ are linear dependent, we clearly know there is a set of real number $a_{1}$, $a_{2}$, ..., $a_{n}$ satisfies:
 
 $$a_{1}y_{1}(t) + a_{2}y_{2}(t) + ... + a_{n}y_{n}(t) = 0, \forall t \in I$$
 
 Let's take derivative of the above equation, we get ($\forall t \in I$):
-$$
+```math
 \begin{align}
 &a_{1}y_{1}^{(1)}(t) + a_{2}y_{2}^{(1)}(t) + \cdots + a_{n}y_{n}^{(1)}(t) = 0 \\
 &a_{1}y_{1}^{(2)}(t) + a_{2}y_{2}^{(2)}(t) + \cdots + a_{n}y_{n}^{(2)}(t) = 0 \\
 &... \\
 &a_{1}y_{1}^{(n-1)}(t) + a_{2}y_{2}^{(n-1)}(t) + \cdots + a_{n}y_{n}^{(n-1)}(t) = 0 \\
 \end{align}
-$$
+```
 
 Further write it into Matrix form:
-$$
+```math
 \begin{bmatrix}
 y_{1} & y_{2} & \cdots & y_{n} \\
 y_{1}^{(1)} & y_{2}^{(1)} & \cdots & y_{n}^{(1)} \\
@@ -176,17 +176,17 @@ y_{1}^{(1)} & y_{2}^{(1)} & \cdots & y_{n}^{(1)} \\
 y_{1}^{(n-1)} & y_{2}^{(n-1)} & \cdots & y_{n}^{(n-1)}
 \end{bmatrix} \begin{bmatrix} a_{1} \\ a_{2} \\ \vdots \\ a_{n} \end{bmatrix} = 
 \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{bmatrix}
-$$
+```
 
 Let's denote:
-$$
+```math
 A = \begin{bmatrix}
 y_{1} & y_{2} & \cdots & y_{n} \\
 y_{1}^{(1)} & y_{2}^{(1)} & \cdots & y_{n}^{(1)} \\
 \vdots & \vdots & \ddots & \vdots \\
 y_{1}^{(n-1)} & y_{2}^{(n-1)} & \cdots & y_{n}^{(n-1)}
 \end{bmatrix}
-$$
+```
 
 Obviously, $A$ has a none zero solution $\vec{a} = [a_{1}, a_{2}, \cdots, a_{n}]^{T}$ for equation $A\vec{x} = 0$, that means $\mathrm{det}(A) = 0 = Wr[y_{1}, y_{2}, \cdots, y_{n}]$
 

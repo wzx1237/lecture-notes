@@ -102,7 +102,7 @@ in our example, the equation in (iii) can be rewrited as $\frac{d}{dt} [ye^{-t}]
 
 So, the answer is $y = (t - \frac{1}{2})e^{3t}$
 
-## How to solve differential equation in a general way?
+## How to solve homogenous differential equation in a general way?
 ### characteristic polynomial method
 
 Now, consider we have differential equation:
@@ -129,7 +129,7 @@ Then, how can we find the Null space? Notice that linear space is defined by its
 1. how many number of basis we need (dim)
 2. are these vectors really form the basis
 
-The answer of first question is given by the **Basic Existance and Uniqueness Theorem**. It suggests: Assume all cofficients $a_{0}(t)$, ... , $a_{n-1}(t)$ and $f(t)$ are continous over interval $(t_{1}, t_{2})$. Then given any initial time $t_{I}$ in $(t_{1}, t_{2})$ and any initial data $y_1$, ... , $y_{n-1}$. There **exists** a **unique solution** $y = Y(t)$ of our differential equation.
+The answer of first question is given by the **Basic Existance and Uniqueness Theorem**. It suggests: Assume all cofficients $a_{0}(t)$, ... , $a_{n-1}(t)$ and $f(t)$ are continous over interval $(t_{1}, t_{2})$. Then given any initial time $t_{I}$ in $(t_{1}, t_{2})$ and any initial data $y_1$, ... , $y_{n-1}$. There **exists** a **unique solution** $y = Y(t)$ of our differential equation (even with forcing term).
 
 So, we can ealisy construct a bijection between the solution space and $\mathbb{R}^{n}$. That is because the value we need is: $y_1$, ... , $y_{n-1}$ and $t_{I}$, totally $n$ numbers. We can simply assemble them into a n-dimension vector, which is in $\mathbb{R}^{n}$. Thus, by the **Basic Existance and Uniqueness Theorem**, the solution is determined by these vector (existance implies "onto"; uniqueness suggests "one-to-one"). So, this is a bijection.
 
@@ -211,3 +211,13 @@ since exponential function is alway positive, we further sinplify it into:
 $$r^{n} + a_{n-1}r^{n-1} + \cdots + a_{0} = 0$$
 
 which is the **"characteristic polynomial"**. And if $r$ is the root of characteristic polynomial, it suggests that $e^{rt}$ will become one solution of $Ly = 0$. By solving the characteristic equation, we can find the general solution.
+
+## Extend to nonhomogenous equation
+### Undetermined Coefficient
+While we mentioned how to solve homogenous differential equation, but obviously there are more non-homogenous differential equation. How can we solve these equations?
+
+Let's consider the following equations:
+
+$$ Ly = \frac{\mathrm{d}^{n}y}{\mathrm{d}t} + a_{n-1} \frac{\mathrm{d}^{n-1}y}{\mathrm{d}t} + ... + a_{1} \frac{\mathrm{d}y}{\mathrm{d}t} + a_{0} y = f(t)$$
+
+here, we call $f(t)$ "forcing term". And this time, the forcing term wouldn't be always zero, which makes the equation more complex.

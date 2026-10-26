@@ -133,4 +133,81 @@ The answer of first question is given by the **Basic Existance and Uniqueness Th
 
 So, we can ealisy construct a bijection between the solution space and $\mathbb{R}^{n}$. That is because the value we need is: $y_1$, ... , $y_{n-1}$ and $t_{I}$, totally $n$ numbers. We can simply assemble them into a n-dimension vector, which is in $\mathbb{R}^{n}$. Thus, by the **Basic Existance and Uniqueness Theorem**, the solution is determined by these vector (existance implies "onto"; uniqueness suggests "one-to-one"). So, this is a bijection.
 
-The answer of problem 2 can be examed by **Wronskain**.
+From above discussion, finding n linear independent basis of solution space can directly solve our problem. **But how can we determine whether the solution we find is linear independent from each other?** That is why we ask for problem 2. To address this problem, we need to introduce a new technique: **determinant and Wronskain**
+
+As we know in linear algebra, **Linear system** $A\vec{x} = 0$ **will have nonzero solution if and only if** $\mathrm{det}(A) = 0$. So, determinants provide us a way to machincally exam whether the given basis is linear independent or not. To illustrate how can we apply it, let's use determinants to solve the second problem.
+
+**Lemma: solutions to the differential equation $Ly = 0$ are linear dependent if and only if the Wronskain is always zero over interval of definition $I$.** Where the Wronskain is defined by:
+$$
+Wr[y_{1}, y_{2}, \cdots, y_{n}] = 
+\begin{vmatrix}
+y_{1} & y_{2} & \cdots & y_{n} \\
+y_{1}^{(1)} & y_{2}^{(1)} & \cdots & y_{n}^{(1)} \\
+\vdots & \vdots & \ddots & \vdots \\
+y_{1}^{(n-1)} & y_{2}^{(n-1)} & \cdots & y_{n}^{(n-1)}
+\end{vmatrix} = \mathrm{det} \begin{pmatrix}
+y_{1} & y_{2} & \cdots & y_{n} \\
+y_{1}^{(1)} & y_{2}^{(1)} & \cdots & y_{n}^{(1)} \\
+\vdots & \vdots & \ddots & \vdots \\
+y_{1}^{(n-1)} & y_{2}^{(n-1)} & \cdots & y_{n}^{(n-1)}
+\end{pmatrix}
+$$
+
+($\Rightarrow$): since we assume solutions $y_{1}(t)$, $y_{2}(t)$, ..., $y_{n}(t)$ are linear dependent, we clearly know there is a set of real number $a_{1}$, $a_{2}$, ..., $a_{n}$ satisfies:
+
+$$a_{1}y_{1}(t) + a_{2}y_{2}(t) + ... + a_{n}y_{n}(t) = 0, \forall t \in I$$
+
+Let's take derivative of the above equation, we get ($\forall t \in I$):
+$$
+\begin{align}
+&a_{1}y_{1}^{(1)}(t) + a_{2}y_{2}^{(1)}(t) + \cdots + a_{n}y_{n}^{(1)}(t) = 0 \\
+&a_{1}y_{1}^{(2)}(t) + a_{2}y_{2}^{(2)}(t) + \cdots + a_{n}y_{n}^{(2)}(t) = 0 \\
+&... \\
+&a_{1}y_{1}^{(n-1)}(t) + a_{2}y_{2}^{(n-1)}(t) + \cdots + a_{n}y_{n}^{(n-1)}(t) = 0 \\
+\end{align}
+$$
+
+Further write it into Matrix form:
+$$
+\begin{bmatrix}
+y_{1} & y_{2} & \cdots & y_{n} \\
+y_{1}^{(1)} & y_{2}^{(1)} & \cdots & y_{n}^{(1)} \\
+\vdots & \vdots & \ddots & \vdots \\
+y_{1}^{(n-1)} & y_{2}^{(n-1)} & \cdots & y_{n}^{(n-1)}
+\end{bmatrix} \begin{bmatrix} a_{1} \\ a_{2} \\ \vdots \\ a_{n} \end{bmatrix} = 
+\begin{bmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{bmatrix}
+$$
+
+Let's denote:
+$$
+A = \begin{bmatrix}
+y_{1} & y_{2} & \cdots & y_{n} \\
+y_{1}^{(1)} & y_{2}^{(1)} & \cdots & y_{n}^{(1)} \\
+\vdots & \vdots & \ddots & \vdots \\
+y_{1}^{(n-1)} & y_{2}^{(n-1)} & \cdots & y_{n}^{(n-1)}
+\end{bmatrix}
+$$
+
+Obviously, $A$ has a none zero solution $\vec{a} = [a_{1}, a_{2}, \cdots, a_{n}]^{T}$ for equation $A\vec{x} = 0$, that means $\mathrm{det}(A) = 0 = Wr[y_{1}, y_{2}, \cdots, y_{n}]$
+
+($\Leftarrow$): Given the Wronskain is zero, we know: $\mathrm{det}(A) = 0$, which suggest that there exist a non-zeor solution $\vec{a}$ such that $A\vec{a} = 0$, which means: $[y_{1}, y_{2}, \cdots, y_{n}] \cdot \vec{a} = 0$. So we conclude:
+
+$$a_{1}y_{1}^{(1)}(t) + a_{2}y_{2}^{(1)}(t) + \cdots + a_{n}y_{n}^{(1)}(t) = 0, \forall t \in I$$
+
+So, $y_{1}(t)$, $y_{2}(t)$, ..., $y_{n}(t)$ are linear dependent.
+
+Thus, we proved Wronskain can help us check whether solutions are linear independent ($Wr \not = 0$). From above discussion, we also know how important tool Linear Algebra is. It can help us solve such difficult and unseemingly unrelated questions.
+
+#### Find the exact solution
+
+We already know finding n linear independent solution is suffcient to get the general solution and get the way to test whether our solution is valid. Here, I will introduce a straightforward and simple way to find the possible solution of our differential equation, which called **"characteristic polynomial method"**
+
+Notice that $\frac{\mathrm{d}}{\mathrm{d}t}e^{\mu t} = \mu e^{\mu t}$, we can use this interesting property to construct our solution. Let's assume our solution has form: $y_{k}(t) = e^{rt}$. Thus $Ly = 0$ becomes:
+
+$$(r^{n} + a_{n-1}r^{n-1} + \cdots + a_{0})e^{rt} = 0$$
+
+since exponential function is alway positive, we further sinplify it into:
+
+$$r^{n} + a_{n-1}r^{n-1} + \cdots + a_{0} = 0$$
+
+which is the **"characteristic polynomial"**. And if $r$ is the root of characteristic polynomial, it suggests that $e^{rt}$ will become one solution of $Ly = 0$. By solving the characteristic equation, we can find the general solution.

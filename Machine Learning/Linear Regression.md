@@ -29,14 +29,14 @@ A\vec{\omega} = \hat{\vec{y}} = \mathrm{proj}_{\mathrm{Col} A} \vec{y}
 
 However, finding the projection is hard, do we have a way to avoid that?
 
-lemma: $\mathrm{Col} A \vert mathrm{Nul} A^{T}$
+lemma: $\mathrm{Col} A \perp mathrm{Nul} A^{T}$
 
 Proof:
 
 given $\forall b \in \mathrm{Col} A \text{and} \forall y \in \mathrm{Nul} A^{T}$, we have:
-$b = Ax$ for some x and $A^{T}y = 0$. Thus we find: $b \cdot y = Ax \cdot y$, by definition of dot product, we know: $Ax \cdot y = xA^{T}y$. That means: $b \cdot y = Ax \cdot y = x(A^{T}y) = x \cdot 0 = 0$. So, by definition od orthogonal, we know: $\mathrm{Col} A \vert mathrm{Nul} A^{T}$
+$b = Ax$ for some x and $A^{T}y = 0$. Thus we find: $b \cdot y = Ax \cdot y$, by definition of dot product, we know: $Ax \cdot y = xA^{T}y$. That means: $b \cdot y = Ax \cdot y = x(A^{T}y) = x \cdot 0 = 0$. So, by definition od orthogonal, we know: $\mathrm{Col} A \perp mathrm{Nul} A^{T}$
 
-Now, back to our question, where should we use our lemma? Notice that the shorest distance is given by the projection, which means: $\vec{y} - \hat{\vec{y}} \vert \mathrm{Col}A$. Applying our lemma, we know: $\vec{y} - \hat{\vec{y}} \in \mathrm{Col}A^{\vert} = \methrm{Nul}A^{T}$.
+Now, back to our question, where should we use our lemma? Notice that the shorest distance is given by the projection, which means: $\vec{y} - \hat{\vec{y}} \perp \mathrm{Col}A$. Applying our lemma, we know: $\vec{y} - \hat{\vec{y}} \in \mathrm{Col}A^{\perp} = \mathrm{Nul}A^{T}$.
 
 Thus, we have:
 ```math

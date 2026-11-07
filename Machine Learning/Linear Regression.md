@@ -55,4 +55,10 @@ Though Linear regression provide us a good way to do regression task, it still h
 
 However, this problem can be improved by putting some trick on features. For example, the boundary we want is $x_{1}^{2} + x_{2}^{2} + x_{1}x_{2} = 4$. Obviously, this question is too hard for stanard linear regression. However, what if we introduce new features manually, i.e. $(1, x_{1}, x_{2}, x_{1}^{2}, x_{2}^{2}, x_{1}x_{2})$. Can linear regression works on this revised feature vector? Appearantly, the answer is yes. Let's let $\omega = (-4, 0, 0, 1, 1, 1)$, we perfectly finnd the decision boundary.
 
-Since the features we add usually would be polynomial, we call this method "Polynomial Feature Method".
+Since the features we add usually would be polynomial, we call this method "Polynomial Feature Method". However, there is an issue with this method. This about how can we determine which order we want for the polynomials. Say, if the order of our prediction is 5 but the real decision boundary have order 10, our model will be like to have underftiing issue; if the order of our prediction is 5, but the real decision boundary is linear, our model will be likely to suffer overfitting problem. We want to control this, however, it is almost impossible for human to determine which order is best before training, since our humankind is not designed to know the order of decision bounary of millions of data.
+
+Then, how can we control the order? Add a new term called "regularization" term, as it is named, will help us regularize the behavior/perference of our model.
+
+$$L(\omega, b) = \frac{1}{N} \sum_{i=1}^{N} (y_{i} - \hat{y_{i}})^{2} + \frac{1}{2} \|\omega\|^{2}$$
+
+where the last term $\frac{1}{2} \|\omega\|^{2}$ is called "regularization term". Notice that this term will punish the model with large $\omega$ (with higher order, there will have more non-zero elements in $\omega$), which will also punish the higher order. So, with this regularization term, we can let our model grow in the way we prefer.

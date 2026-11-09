@@ -105,9 +105,13 @@ $= sum_{n=1}^{N}\alpha_{n} - \frac{1}{2} \sum_{n=1}^{N}\sum_{m=1}^{N} \alpha_{n}
 Now, we know we just need to maximize $f_{D}$ under condition $\sum_{n=1}^{N} \alpha_n y_n = 0$ and $\alpha_{n} \ge 0$, which can be done with `Lagrange Multiplier` again.
 
 After we get the solution, we have:
-$$\mathbf{w} = \sum_{n=1}^{N} \alpha_n y_n \mathbf{x}_n$$
+```math
+\mathbf{w} = \sum_{n=1}^{N} \alpha_n y_n \mathbf{x}_n
+```
 and:
-$$b = -\frac{1}{2} \left( \min_{n: y_n=+1} \mathbf{w}^T \mathbf{x}_n + \max_{n: y_n=-1} \mathbf{w}^T \mathbf{x}_n\right)$$
+```math
+b = -\frac{1}{2} \left( \min_{n: y_n=+1} \mathbf{w}^T \mathbf{x}_n + \max_{n: y_n=-1} \mathbf{w}^T \mathbf{x}_n\right)
+```
 
 So, we can using above equations to solve $\omega$ and $b$.
 
